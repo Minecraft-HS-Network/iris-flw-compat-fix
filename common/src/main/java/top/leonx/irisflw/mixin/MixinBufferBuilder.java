@@ -35,7 +35,8 @@ public class MixinBufferBuilder implements BufferBuilderAccessor {
     private VertexFormat iris$extendFormat(VertexFormat format) {
         if(!BufferBuilderStateManager.isAllowExtend()){
             extending = false;
-            return DefaultVertexFormat.BLOCK;
+            if (IrisApi.getInstance().isShaderPackInUse())
+                return DefaultVertexFormat.BLOCK;
         }
 
         return format;
