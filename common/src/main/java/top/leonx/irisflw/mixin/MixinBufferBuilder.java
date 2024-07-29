@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import top.leonx.irisflw.accessors.BufferBuilderAccessor;
 import top.leonx.irisflw.iris.BufferBuilderStateManager;
-import net.irisshaders.iris.api.v0;
+import net.irisshaders.iris.api;
 
 @Mixin(value = BufferBuilder.class,priority = 1010)
 public class MixinBufferBuilder implements BufferBuilderAccessor {
